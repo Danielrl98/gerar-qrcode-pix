@@ -9,8 +9,10 @@ app.post('/', gerarPix);
 app.get('/teste', (req, res) => {
     res.send('Hello from Lambda!');
 })
-
-app.listen(8000)
+const hostname = '0.0.0.0'
+app.listen(8000,hostname ,() => {
+    console.log('run')
+})
 
 export const handler = serverless(app);
 //https://aparecidadofuturo.org/checkout/order-received/12158/?key=wc_order_WNERuWAUUhS8t
