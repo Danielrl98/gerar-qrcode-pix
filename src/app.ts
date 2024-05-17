@@ -9,8 +9,8 @@ app.post('/', gerarPix);
 app.get('/teste', (req, res) => {
     res.send('Hello from Lambda!');
 })
-const hostname = '0.0.0.0'
-app.listen(443,hostname ,() => {
+
+app.listen(3333, () => {
     console.log('run')
 })
 
