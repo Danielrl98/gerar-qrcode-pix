@@ -6,11 +6,11 @@ import serverless from 'serverless-http'
 app.use(express.json());
 
 app.post('/', gerarPix);
-app.get('/teste', (req, res) => {
-    res.send('Hello from Lambda!');
+app.get('/', (req, res) => {
+    res.send('Hello from Lambda vercel!');
 })
 
-app.listen(3333, () => {
+app.listen(3333, '0.0.0.0', () => {
     console.log('run')
 })
 
